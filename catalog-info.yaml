@@ -1,0 +1,27 @@
+apiVersion: backstage.io/v1beta1
+kind: Component
+metadata:
+  name: test-oc-plugin
+  metadata:
+  annotations:
+    argocd/app-name: test-oc-plugin
+    backstage.io/adr-location: docs/adr
+    backstage.io/techdocs-ref: dir:.
+    backstage.io/kubernetes-id: test-oc-plugin
+    backstage.io/kubernetes-namespace: test-oc-plugin
+    github.com/project-slug: neenspa/test-oc-plugin
+    janus-idp.io/tekton-enabled: 'true'
+  links:
+    - url: https://console-openshift-console.apps.democp.vega.local/pipelines/ns/test-oc-plugin/
+      title: Pipelines
+      icon: web
+    - url: https://console-openshift-console.apps.democp.vega.local/k8s/ns/test-oc-plugin/deployments/test-oc-plugin
+      title: Deployment
+      icon: web
+    - url: https://devspaces.apps.democp.vega.local/#https://github.com/neenspa/test-oc-plugin?che-editor=che-incubator/che-code/latest&devfilePath=.devfile-vscode.yaml
+      title: OpenShift Dev Spaces (VS Code)
+      icon: web
+spec:
+  type: website
+  owner: user:guest
+  lifecycle: production
